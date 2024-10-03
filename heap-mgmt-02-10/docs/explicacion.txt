@@ -1,0 +1,14 @@
+La memoria heap se gestiona mediante un árbol binario.
+Como la idea es asignar memoria en una est, asumamos que el árbol tiene n posiciones.
+Para la asignación de memoria en el heap se puede usar un arbol binario ordenado de mayor a menor o de menor a mayor.
+
+¿Cómo trabaja internamente el S.O. a la hora de asignar un valor x (digamos 40) a una estructura en la memoria heap?
+
+Dentro de una lista/vector, el 40 cae debajo el 5 (revisar foto)
+
+Para saber en qué posición asignarlo, hace una división constante entre 2 para ir reemplazando los valores.
+
+Divide i / 2, y si el elemento en esa posición es menor que el que estamos buscando, lo intercambia hasta que ya no se da el caso.
+
+Un heap de máximos, max heap, es un árbol binario completo tal que, el valor de la clave de cada nodo es mayor o igual que las claves de sus nodos hijos
+(si los tiene). De la definición se deduce que la clave contenida en el nodo raíz de un max heap (min heap) es la mayor clave del árbol.
