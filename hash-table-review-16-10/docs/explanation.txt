@@ -1,0 +1,22 @@
+Las tablas hash son estructuras de datos que se utilizan para almacenar un número elevado de datos sobre los que se necesitan operaciones de búsqueda e inserción muy eficientes. Una tabla hash almacena un conjunto de pares “(clave, valor)”. La clave es única para cada elemento de la tabla y es el dato que se utiliza para buscar un determinado valor.
+
+Una segunda opción para tener una búsqueda muy rápida podría ser almacenar todos los datos en una tabla y utilizar el número de pasaporte como su índice. En este caso, ver si un número está en la tabla consiste simplemente en ver si tiene una cadena asociada. El insertar un nuevo par (pasaporte, mensaje) también sería muy rápido pues consistiría en guardar el mensaje dado en la posición correspondiente al número. Pero el problema con esta solución es que el número de pasaportes puede ser un entero muy largo y por tanto la tabla que se necesita definir está más allá de lo aceptable.
+
+La tabla hash ofrece un compromiso para esta situación. Los pares (clave, valor) se guardan en una tabla, pero con un tamaño menor del ideal. Para nuestro ejemplo, se utiliza una tabla, pero no tiene como tamaño el número máximo de pasaportes posibles, sino un número más pequeño.
+
+Se usan para poder recorrer los registros en un motor de base de datos. SQL Server usa cursores,
+PLSQL usa integer/binario.
+
+En los procesos del S.O., todos se generan en base a una hash.
+
+La implementación de una tabla hash está basada en los siguientes elementos:
+
+Una tabla de un tamaño razonable para almacenar los pares (clave, valor).
+
+Una función “hash” que recibe la clave y devuelve un índice para acceder a una posición de la tabla.
+
+Un procedimiento para tratar los casos en los que la función anterior devuelve el mismo índice para dos claves distintas. Esta situación se conoce con el nombre de colisión.
+
+Técnicas hashing:
+
+S
