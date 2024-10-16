@@ -9,6 +9,6 @@ public:
   void Insert(int key);
   int Search(int key);
   void Print();
-  ~HashTable();
+ // ~HashTable();
 };
 #endif // !HASTABLE_H

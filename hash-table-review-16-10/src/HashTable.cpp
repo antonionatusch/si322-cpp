@@ -66,10 +66,10 @@ int HashTable::Search(int key) {
 
   return -1;
 }
-HashTable::~HashTable() {
+/* HashTable::~HashTable() {
   for (int i = 0; i < 10; i++) {
     while(HT[i]){
 
     }
   }
-}
+}*/
